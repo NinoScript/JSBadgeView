@@ -204,8 +204,8 @@ static BOOL JSBadgeViewIsUIKitFlatMode(void)
             NSAssert(NO, @"Unimplemented JSBadgeAligment type %d", self.badgeAlignment);
     }
     
-    newFrame.origin.x += _badgePositionAdjustment.x;
-    newFrame.origin.y += _badgePositionAdjustment.y;
+    newFrame.origin.x += superviewBounds.origin.x + _badgePositionAdjustment.x;
+    newFrame.origin.y += superviewBounds.origin.y + _badgePositionAdjustment.y;
     
     // Do not set frame directly so we do not interfere with any potential transform set on the view.
     self.bounds = CGRectIntegral(CGRectMake(0, 0, CGRectGetWidth(newFrame), CGRectGetHeight(newFrame)));
