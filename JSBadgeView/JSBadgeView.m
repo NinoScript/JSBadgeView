@@ -416,7 +416,7 @@ static BOOL JSBadgeViewIsUIKitFlatMode(void)
             const CGSize textSize = [self sizeOfTextForCurrentSettings];
             
             textFrame.size.height = textSize.height;
-            textFrame.origin.y = rectToDraw.origin.y + ceilf((rectToDraw.size.height - textFrame.size.height) / 2.0f);
+            textFrame.origin.y = rectToDraw.origin.y + ceilf((rectToDraw.size.height - textFrame.size.height) / 2.0f) -1;
 
             JSBadgeViewSilenceDeprecatedMethodStart();
             [self.badgeText drawInRect:textFrame
