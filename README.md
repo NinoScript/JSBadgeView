@@ -1,3 +1,16 @@
+## About this fork
+
+- Fixed a 1 pixel vertical offset in the badge text that was driving me and my OCD crazy.
+- Badge position is now relative to the view set with `frameToPositionInRelationWith`, use case:
+  
+    if you try to put a badge on a UISegmentedControl, the control fill color will be on top of the badge; so instead, put it in the parent view controller and position it to the segmented control with `setFrameToPositionInRelationWith:`.
+  
+- It now has a podspec file on the project's root, so to install, use CocoaPods with the following line on the Podfile:
+  
+        pod 'JSBadgeView', :git => 'https://github.com/NinoScript/JSBadgeView'
+
+(The following text is unmodified from the original repo)
+
 ## JSBadgeView
 
 Customizable UIKit badge view like the one on applications in the iOS springboard.
